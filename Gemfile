@@ -25,6 +25,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 gem 'cancancan'
 gem 'rails_admin', '~> 3.0'
+gem 'hamlit-rails'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
