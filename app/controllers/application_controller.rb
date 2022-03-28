@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(resource)
     if resource.role == "member"
-      root_path
+      member_root_path
     elsif resource.role == "admin"
       admin_root_path
     elsif resource.role == "super_admin"

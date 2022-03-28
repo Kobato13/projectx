@@ -8,17 +8,18 @@ class Ability
     #
       user ||= User.new # guest user (not logged in)
       
+      can :read, :all
+      return unless user && user.admin?
+      can :access, :rails_admin
+      can :read, :dashboard 
+
       if user.super_admin?
-        can :access, :rails_admin
         can :manage, :all
-        end
-      if user.admin?
-        can :index, Admin
-        can :manage, :User
+      elsif user.admin?
+        can :manage, [Admin, Home]
       end 
       if user.member?
-        can :index, :Home
-        can :index, :User
+        can :manage, [Member, Home]
       end    
     #
     # The first argument to `can` is the action you are giving the user

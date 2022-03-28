@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/command_center/super_admin', as: 'rails_admin'
 
   authenticated :user do
-    get '/admins', to: 'admins#index', as: 'admin_root'
+    get '/admin', to: 'admins#index', as: 'admin_root'
+    get '/member', to: 'members#index', as: 'member_root'
   end
 
 
