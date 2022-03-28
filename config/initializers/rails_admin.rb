@@ -12,6 +12,12 @@ RailsAdmin.config do |config|
   ## == CancanCan ==
   # config.authorize_with :cancancan
 
+  config.parent_controller = 'ApplicationController'
+
+  RailsAdmin.config do |config|
+    config.authorize_with :cancancan
+  end
+
   ## == Pundit ==
   # config.authorize_with :pundit
 

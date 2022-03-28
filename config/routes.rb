@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  mount RailsAdmin::Engine => '/command_center/super_admin', as: 'super_admin_root'
+  mount RailsAdmin::Engine => '/command_center/super_admin', as: 'rails_admin'
 
   authenticated :user do
     get '/admins', to: 'admins#index', as: 'admin_root'

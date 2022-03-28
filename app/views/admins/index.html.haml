@@ -1,1 +1,26 @@
 This is the admin panel
+
+Hello!
+
+= current_user.first_name + " " + current_user.last_name
+
+
+
+%h3 Invite a Member
+= form_with url: "/", method: :get do |f|
+  = f.label :first_name, "First Name:"
+  %br
+  = f.text_field :first_name
+  %br
+  %br
+  = f.label :last_name, "Last Name:"
+  %br
+  = f.text_field :last_name
+  %br
+  %br
+  = f.label :email, "Email:"
+  %br
+  = f.text_field :email
+  %br
+  %br
+  = f.submit "Invite this member"

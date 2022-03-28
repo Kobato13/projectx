@@ -1,2 +1,9 @@
 %div{class: "text-3xl font-bold underline"}
   Hello world!
+  %br
+  This is the user homepage
+
+  Hello!
+
+  - if user_signed_in?
+    = current_user.first_name + " " + current_user.last_name
