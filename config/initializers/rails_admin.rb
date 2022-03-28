@@ -10,13 +10,13 @@ RailsAdmin.config do |config|
   config.current_user_method(&:current_user)
 
   ## == CancanCan ==
-  # config.authorize_with :cancancan
+  config.authorize_with :cancancan
 
-  config.parent_controller = 'ApplicationController'
+  # config.parent_controller = 'ApplicationController'
 
-  RailsAdmin.config do |config|
-    config.authorize_with :cancancan
-  end
+  # RailsAdmin.config do |config|
+  #   config.authorize_with :cancancan
+  # end
 
   ## == Pundit ==
   # config.authorize_with :pundit
